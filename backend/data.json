@@ -1,0 +1,80 @@
+[
+  {
+    "id": 3,
+    "name": "Adele",
+    "birthdate": "May 5, 1988",
+    "activeSince": "2006",
+    "genres": ["Pop"],
+    "labels": ["Columbia Records"],
+    "website": "https://www.adele.com/",
+    "image": "adele.jpg",
+    "shortDescription": "Powerful vocalist known for emotional ballads."
+  },
+  {
+    "id": 4,
+    "name": "Martin Garrix",
+    "birthdate": "May 14, 1996",
+    "activeSince": "2012",
+    "genres": ["Electronic"],
+    "labels": ["STMPD RCRDS"],
+    "website": "https://www.martingarrix.com/",
+    "image": "martin_garrix.jpg",
+    "shortDescription": "Famous DJ and electronic music producer."
+  },
+  {
+    "id": 5,
+    "name": "Herbie Hancock",
+    "birthdate": "April 12, 1940",
+    "activeSince": "1960",
+    "genres": ["Jazz"],
+    "labels": ["Columbia Records"],
+    "website": "https://www.herbiehancock.com/",
+    "image": "herbie_hancock.jpg",
+    "shortDescription": "Influential jazz pianist and composer."
+  },
+  {
+    "id": 6,
+    "name": "Blake Shelton",
+    "birthdate": "June 18, 1976",
+    "activeSince": "2001",
+    "genres": ["Country"],
+    "labels": ["Warner Bros. Records"],
+    "website": "https://www.blakeshelton.com/",
+    "image": "blake_shelton.jpg",
+    "shortDescription": "Country superstar and television personality."
+  },
+  {
+    "id": 7,
+    "name": "Ed Sheeran",
+    "birthdate": "February 17, 1991",
+    "activeSince": "2004",
+    "genres": ["Rock"],
+    "labels": ["Asylum Records", "Atlantic Records"],
+    "website": "https://www.edsheeran.com/",
+    "image": "ed_sheeran.jpg",
+    "shortDescription": "Singer-songwriter with a blend of pop and folk."
+  },
+  {
+    "id": 8,
+    "name": "Daft Punk",
+    "birthdate": "Founded in 1993",
+    "activeSince": "1993",
+    "genres": ["Electronic"],
+    "labels": ["Daft Life", "Virgin Records"],
+    "website": "N/A",
+    "image": "https://images.unsplash.com/photo-1642013126529-f674c5b87dbe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyOTA4MTB8MHwxfGFsbHwxNXx8fHx8fDJ8fDE2NDIwNzUwMzQ&ixlib=rb-1.2.1&q=60&w=600",
+    "shortDescription": "Legendary French electronic music duo."
+  },
+  {
+    "id": 9,
+    "name": "Billie Eilish",
+    "birthdate": "December 18, 2001",
+    "activeSince": "2015",
+    "genres": ["Electropop"],
+    "labels": ["Darkroom", "Interscope Records"],
+    "website": "https://www.billieeilish.com/",
+    "image": "billie_eilish.jpg",
+    "shortDescription": "Young sensation known for her unique style."
+  },
+  { "id": 1695577470970 }
+]
