@@ -1,3 +1,5 @@
+"use strict";
+
 // ============ GLOBAL VARIABELS ============ //
 const endpoint = "http://localhost:3333";
 
@@ -41,7 +43,7 @@ function displayArtists(list) {
             <article>
                 <img src="${artist.image}">
                 <h2>${artist.name}</h2>
-                <p>${artist.birthdate}</p>
+                <p>${artist.birthDate}</p>
                 <p>${artist.activeSince}</p>
                 <p>${artist.genres}</p>
                 <p>${artist.labels}</p>
@@ -105,6 +107,7 @@ async function createArtist(event) {
 // ============ UPDATE ============ //
 function selectUser(artist) {
   // Set global varaiable
+  console.log(artist);
   selectedUser = artist;
   const form = document.querySelector("#form-update");
   form.name.value = artist.name;
@@ -140,6 +143,7 @@ async function updateUser(event) {
     genres,
     shortDescription,
   };
+  console.log("User to update:", userToUpdate);
   const userAsJson = JSON.stringify(userToUpdate);
   const response = await fetch(`${endpoint}/artists/${selectedUser.id}`, {
     method: "PUT",

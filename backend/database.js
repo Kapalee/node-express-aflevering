@@ -16,15 +16,19 @@ app.get("/", (request, response) => {
   response.send("Hello World");
 });
 
-app.get("/test", (request, response) => {
-  response.send("Godaften herre");
-});
-
 app.get("/artists", async (request, response) => {
   const data = await fs.readFile("data.json");
   const artist = JSON.parse(data);
-  console.log(artist);
   response.json(artist);
+});
+
+app.get("/artists/:id", async (request, response) => {
+  console.log(request.params);
+  const artistId = Number(request.params.id);
+  const data = await fs.readFile("data.json");
+  const artists = JSON.parse(data);
+  const result = artists.find((artist) => artist.id == artistId);
+  response.json(result);
 });
 
 app.post("/artists", async (request, response) => {
@@ -42,22 +46,24 @@ app.post("/artists", async (request, response) => {
 
 app.put("/artists/:id", async (request, response) => {
   const id = request.params.id;
-  console.log(id);
   const data = await fs.readFile("data.json");
   const artists = JSON.parse(data);
 
-  let userToUpdate = artists.find((user) => user.id === Number(id));
+  let updatedArtists = artists.find((artist) => artist.id == id);
+
   const body = request.body;
-  console.log(body);
-  userToUpdate.image = body.image;
-  userToUpdate.mail = body.mail;
-  userToUpdate.name = body.name;
-  userToUpdate.title = body.title;
+  updatedArtists.name = body.name;
+  updatedArtists.birthDate = body.birthDate;
+  updatedArtists.activeSince = body.activeSince;
+  updatedArtists.genres = body.genres;
+  updatedArtists.labels = body.labels;
+  updatedArtists.website = body.website;
+  updatedArtists.image = body.image;
+  updatedArtists.shortDescription = body.shortDescription;
 
   fs.writeFile("data.json", JSON.stringify(artists));
-  response.json(artists);
+  response.json(updatedArtists);
 });
-
 app.delete("/artists/:id", async (request, response) => {
   const id = Number(request.params.id);
 
